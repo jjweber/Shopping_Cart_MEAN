@@ -1,0 +1,71 @@
+/* Style the header */
+.header {
+    padding: 10px 16px;
+    background: #555;
+    color: #f1f1f1;
+    position: fixed;
+    top: 30px;
+    width: 100%;
+}
+
+/* Page content */
+.content {
+    padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 102px;
+}
+
+.item-container {
+    width: 85%;
+    min-height: 100%;
+    margin: 10rem auto;
+}
+
+.item-container .col-xs-6 {
+    margin: 0 auto;
+}
+
+.row {
+    margin-bottom: 5rem;
+    max-height: 100%;
+}
+
+.card {
+    height: 100%;
+}
+
+.card img {
+    text-align: center;
+    max-width: 150px;
+    max-height: 188px;
+    margin: 1rem auto;
+}
+
+.card .description {
+    color: #7f7f7f;
+}
+
+.purchase-container div {
+    width: 50%;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.price p {
+    width: 100%;
+}
+
+.pull-right {
+    float: right;
+}

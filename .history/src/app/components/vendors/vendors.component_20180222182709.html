@@ -1,0 +1,60 @@
+<div class="vendor-container">
+    <div class="row">
+      <h3>Vendor Product Management</h3>
+    </div>
+    <div class="row">
+      <p>
+          <a [routerLink]="['/create-form']" class="btn btn-success">Create</a>
+      </p>
+      <table class="table table-striped table-dark">
+      <thead>
+          <tr>
+          <th scope="col">Product Id</th>
+          <th scope="col">Product ImagePath</th>
+          <th scope="col">Product Title</th>
+          <th scope="col">Product Description</th>
+          <th scope="col">Product Price</th>
+          </tr>
+      </thead>
+          <tbody>
+              <tr *ngFor="let item of products; let i = index">
+                  
+                  <th scope="row">{{item.id}}</th>
+                  <td><img class="img-responsive" [src]="item.imagePath" alt="image"></td>
+                  <td>{{item.title}}</td>
+                  <td>{{item.description}}</td>
+                  <td>{{item.price}}</td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+</div>
+
+
+<!-- Modal to show larger view of selected video -->
+<div class="modal fade modal-fullscreen  footer-to-bottom" id="myModal" tabindex="-1" role="dialog" aria-labelledby="emyModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalLabel">{{selectedItem.title}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="card-body">
+              <div *ngIf="selectedItem.imagePath;">
+                <img [src]="selectedItem.imagePath" class="img-fluid|thumbnail rounded-top|rounded-right|rounded-bottom|rounded-left|rounded-circle|" alt="">
+              </div>
+                <p class='hidden'>{{selectedItem._id}}</p>
+                <p *ngIf="selectedItem.description;" class="card-text">{{selectedItem.description}}</p>
+                <p *ngIf="selectedItem.publishedAt;" class="card-text"><small class="text-muted">{{selectedItem.publishedAt}}</small></p>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-danger" [attr.data-id]="selectedItem" data-dismiss="modal">Delete Content</button>
+        </div>
+      </div>
+    </div>
+  </div>

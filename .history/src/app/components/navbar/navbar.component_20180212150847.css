@@ -1,0 +1,14 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1020;
+}
+
+li.nav-item .is {
+    background: #7676c3;
+}
+
+li.nav-item.active a {
+    color: #FFF;
+}

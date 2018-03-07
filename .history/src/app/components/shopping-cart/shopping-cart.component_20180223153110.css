@@ -1,0 +1,31 @@
+.vendor-container {
+    padding: 100px;
+}
+
+.topRow {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.topRow p {
+    width: 25%;
+}
+
+.badge-seconda {
+    padding: .55rem;
+    float: right;
+}
+
+td img {
+    max-width: 100px;
+}
+
+#outer
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
+}

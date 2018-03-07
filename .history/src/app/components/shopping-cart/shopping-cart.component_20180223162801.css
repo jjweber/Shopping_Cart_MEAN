@@ -1,0 +1,56 @@
+.vendor-container {
+    padding: 0;
+}
+
+.badge-secondary {
+    padding: .55rem;
+}
+thead {
+    padding: 1rem;
+}
+
+td img {
+    max-width: 100px;
+}
+
+#outer {
+    width:100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.inner {
+    display: inline-block;
+}
+
+.topRow btn-success {
+    margin-left: 0;
+}
+
+.topRow button {
+    margin: 0 0 0 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .back {
+        width: 100%;
+    }
+
+    .checkout {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .vendor-container {
+        padding: 100px;
+    }
+
+    .back {
+        float: left;
+    }
+
+    .checkout {
+        float: right;
+    }
+}

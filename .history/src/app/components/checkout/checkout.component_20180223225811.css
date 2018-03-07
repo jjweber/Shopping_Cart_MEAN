@@ -1,0 +1,23 @@
+.checkout-container {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.row.top {
+    width: 100%;
+    margin: 7rem 0;
+    padding: 2rem;
+}
+
+.col-sm-6.col-md-4.col-md-offset-4.col-sm-offset-3 {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#checkout-form {
+    width: 60%;
+    margin: 0 auto;
+    padding: .5rem 2rem;
+}

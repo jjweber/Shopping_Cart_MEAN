@@ -1,0 +1,26 @@
+
+.card img {
+    text-align: center;
+    max-width: 150px;
+}
+
+.card .description {
+    color: #7f7f7f;
+}
+
+.purchase-container div {
+    width: 50%;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.price p {
+    width: 100%;
+}
+
+.pull-right {
+    float: right;
+}

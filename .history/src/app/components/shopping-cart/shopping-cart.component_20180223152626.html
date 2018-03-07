@@ -1,0 +1,40 @@
+<div class="vendor-container">
+    <div class="row">
+      <h3>Shopping Cart</h3>
+    </div>
+    <div class="row">
+        <div class="topRow">
+            <p><a [routerLink]="['/home']" class="btn btn-success">Continue Shopping</a></p>
+            
+        </div>
+
+        <div id="outer">
+            <div class="inner"><button type="submit" class="msgBtn" onClick="return false;" >Save</button></div>
+            <div class="inner"><button type="submit" class="msgBtn2" onClick="return false;">Publish</button></div>
+            <dive><span class="badge badge-primary inner">Cart Total: ${{priceTotal}}.00</span></dive>
+        </div>
+        <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+            <th scope="col">Product Id</th>
+            <th scope="col">Product ImagePath</th>
+            <th scope="col">Product Title</th>
+            <th scope="col">Product Description</th>
+            <th scope="col">Product Price</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr *ngFor="let item of cartItems; let i = index">
+                    <th scope="row">{{item.id}}</th>
+                    <td><img class="img-responsive" [src]="item.imagePath" alt="image"></td>
+                    <td>{{item.title}}</td>
+                    <td>{{item.description}}</td>
+                    <td>{{item.price}}</td>
+                    <td>
+                    <a class="btn">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

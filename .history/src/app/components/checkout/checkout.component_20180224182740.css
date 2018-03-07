@@ -1,0 +1,129 @@
+.checkout-container {
+    background: #2c2c4b;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 1rem;
+}
+
+#checkout-form.row {
+    padding: 0;
+}
+
+.row.top {
+    width: 100%;
+    margin: 0;
+    padding-top: 7rem;
+}
+
+.row.dates {
+    width: 100%;
+    padding: 0;
+}
+
+.row.dates.form-group {
+    padding: 0;
+}
+
+.columnDiv {
+    background: #EEE;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#checkout-form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+input {
+    border: 1px solid #000;
+}
+
+@media only screen and (max-width: 600px) {
+    .btn-success {
+        width: 100%;
+        margin: 2rem 0;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .columnDiv {
+        width: 60%;
+    }
+
+    #checkout-form {
+        width: 75%;
+        margin: 0 auto;
+        padding: .5rem 2rem;
+    }
+
+    .btn-success {
+        margin: 2rem auto;
+        width: 50%;
+    }
+
+}
+
+
+form {
+    padding-top: 10rem;
+}
+
+form.checkout {
+    max-width: 500px;
+    margin: 2rem auto;
+    text-align: center;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    background: white;
+    font-family: monospace;
+    color: #525252;
+    font-size: 1.1rem;
+}
+
+.card-info {
+    
+}
+
+form.checkout button {
+    padding: 0.5rem 1rem;
+    color: white;
+    background: coral;
+    border: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+form.checkout button:active {
+    background: rgb(165, 76, 43);
+}
+
+.StripeElement {
+    margin: 1rem 0 1rem;
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+    border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}

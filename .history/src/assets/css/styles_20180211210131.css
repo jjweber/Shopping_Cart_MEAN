@@ -1,0 +1,24 @@
+.card img {
+    max-height: 150px;
+}
+
+.card .description {
+    color: #7f7f7f;
+}
+
+.row {
+    width: 100%;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.price p {
+    width: 100%;
+}
+
+.pull-right {
+    float: right;
+}

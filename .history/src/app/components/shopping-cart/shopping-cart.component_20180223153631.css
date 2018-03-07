@@ -1,0 +1,34 @@
+.vendor-container {
+    padding: 100px;
+}
+
+.topRow {
+    margin-bottom: 2rem;
+}
+
+.topRow btn-success {
+    margin-left: 0;
+}
+
+.topRow button {
+    margin: 0 0 0 3rem;
+}
+
+.badge-secondary {
+    padding: .55rem;
+}
+
+td img {
+    max-width: 100px;
+}
+
+#outer
+{
+    width:100%;
+    text-align: center;
+    
+}
+.inner
+{
+    display: inline-block;
+}

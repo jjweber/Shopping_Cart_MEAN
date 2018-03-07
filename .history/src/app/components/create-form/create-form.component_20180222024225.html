@@ -1,0 +1,25 @@
+<div class="create-container">
+    <h1>
+        Create A Product
+    </h1>
+    <p>
+        <a href="/home" class="btn btn-danger">Back</a>
+    </p>
+    <form class="needs-validation" action="/student-save" method="POST" novalidate>
+        <div class="form-group">
+            <label for="name">Student Name</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter product title" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="percentage">Student Grade Percentage</label>
+            <input type="number" class="form-control" name="percentage" id="percentage" placeholder="Enter student grade percentage" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Create Student</button>
+    </form>
+</div>

@@ -1,0 +1,57 @@
+<div class="header" id="myHeader">
+  <h2>WD6i</h2>
+</div>
+<div *ngIf="products;" class='item-container'>
+  <div class="row header-row">
+    <div  class="card-deck">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" *ngFor="let item of products; let i = index">
+        <div class="card">
+          <img class="card-img-top img-responsive" [src]="item.imagePath" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{item.title}}</h5>
+            <input type="hidden" value="{{item._id}}">
+            <p class="card-text">{{item.description}}</p>
+            <p><a id="modalBtn" data-toggle="modal" data-target="#myModal" [attr.data-id]="item" (click)="onSelectObject(item)">Read More</a></p>
+            <div class="row purchase-container">
+              <div class="price">
+                <p>${{item.price}}.00</p>
+              </div>
+              <div>
+                <button class="btn btn-primary purchaseBtn" [attr.data-id]="item" (click)="SaveItemToCart(item)">Buy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal to show larger view of selected video -->
+<div class="modal fade modal-fullscreen  footer-to-bottom" id="myModal" tabindex="-1" role="dialog" aria-labelledby="emyModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">{{selectedItem.title}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="card-body">
+            <div *ngIf="selectedItem.imagePath;">
+              <img [src]="selectedItem.imagePath" class="img-fluid|thumbnail rounded-top|rounded-right|rounded-bottom|rounded-left|rounded-circle|" alt="">
+            </div>
+              <p class='hidden'>{{selectedItem._id}}</p>
+              <p *ngIf="selectedItem.description;" class="card-text">{{selectedItem.description}}</p>
+              <p *ngIf="selectedItem.price;" class="card-text"><small class="text-muted">${{selectedItem.price}}.00</small></p>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-danger" [attr.data-id]="selectedItem" (click)="SaveItemToCart()" data-dismiss="modal">Add Item To Cart</button>
+      </div>
+    </div>
+  </div>
+</div>

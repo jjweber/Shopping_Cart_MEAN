@@ -1,0 +1,11 @@
+.vendor-container {
+    padding: 100px;
+}
+
+.badge-primary {
+    padding: .65rem;
+}
+
+td img {
+    max-width: 100px;
+}

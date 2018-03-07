@@ -1,0 +1,13 @@
+
+.page-container {
+    background: #E5E9F2;
+    min-height: 90vh;
+    padding: 3.6rem;
+  }
+  
+  .login-container {
+    background: #FFF;
+    width: 60%;
+    margin: 0 auto 8rem auto;
+    padding: 2rem;
+  }

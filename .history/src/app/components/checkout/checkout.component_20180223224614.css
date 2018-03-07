@@ -1,0 +1,8 @@
+.checkout-container {
+    width: 100%;
+    min-height: 100%;
+    margin: 25rem auto 4rem auto;
+    padding: 5rem;
+    background: #FFF;
+    z-index: 1010;
+}

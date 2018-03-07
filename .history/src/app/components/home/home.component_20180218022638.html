@@ -1,0 +1,56 @@
+<div class="header" id="myHeader">
+    <h2>WD6i</h2>
+  </div>
+  <div class='item-container'>
+    <div class="row header-row">
+      <div class=" col-xs-12 backContainer">
+          <a class="btn btn-primary backBtn" [routerLink]="['/profile']" [routerLinkActive]="'is-active'">Back</a>
+      </div>
+      <div class="video-container">
+        <div *ngIf="products;" class="card-deck">
+
+          <div class="card" *ngFor="let item of products; let i = index">
+
+            <!-- Button trigger modal -->
+            <div id="modalBtn" data-toggle="modal" data-target="#myModal" [attr.data-id]="item" (click)="onSelectObject(item)">
+              <img class="card-img-top" [src]="item.imagePath" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-text">{{item.description}}</p>
+                <p class="card-text"><small class="text-muted">{{item.price}}</small></p>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal to show larger view of selected video -->
+  <div class="modal fade modal-fullscreen  footer-to-bottom" id="myModal" tabindex="-1" role="dialog" aria-labelledby="emyModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalLabel">{{selectedItem.title}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="card-body">
+              <div *ngIf="selectedItem.videoUrl;">
+                <img [src]="selectedItem.imagePath" class="img-fluid|thumbnail rounded-top|rounded-right|rounded-bottom|rounded-left|rounded-circle|" alt="">
+              </div>
+                <p *ngIf="selectedItem.imagePath;" class="hidden">{{selectedItem.imagePath}}</p>
+                <p *ngIf="selectedItem.description;" class="card-text">{{selectedItem.description}}</p>
+                <p *ngIf="selectedItem.publishedAt;" class="card-text"><small class="text-muted">{{selectedItem.publishedAt}}</small></p>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-danger" [attr.data-id]="selectedItem" (click)="removeContent()" data-dismiss="modal">Delete Content</button>
+        </div>
+      </div>
+    </div>
+  </div>

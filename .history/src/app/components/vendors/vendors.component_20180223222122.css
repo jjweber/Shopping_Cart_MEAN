@@ -1,0 +1,26 @@
+.vendor-container {
+    padding: 100px;
+}
+
+.img-fluid\|thumbnail.rounded-top\|rounded-right\|rounded-bottom\|rounded-left\|rounded-circle\| {
+    max-height: 370px;
+    margin-bottom: 2rem;
+}
+
+td img {
+    max-width: 100px;
+}
+
+a.btn.read:hover {
+    cursor: pointer;
+    color: rgb(18, 187, 238);
+}
+
+a.btn.edit:hover {
+    
+    color: rgb(67, 220, 20);
+}
+
+a.btn.delete:hover {
+    color: crimson;
+}
