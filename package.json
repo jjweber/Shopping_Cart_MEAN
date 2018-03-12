@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "test",
-    "start": "node server.js",
+    "start": "ng serve",
     "build": "ng build",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -80,6 +80,9 @@
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
+  },
+  "engines": {
+    "node": "9.8.0"
   },
   "homepage": "https://github.com/jjweber/shoppingcart-mean#readme"
 }
