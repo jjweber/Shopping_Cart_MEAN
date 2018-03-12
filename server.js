@@ -29,7 +29,7 @@ mongoose.connection.on('error', (err) => {
   console.log('Database error '+err);
 });
 
-const port = process.env.PORT || '3000';
+const port = process.env.PORT || '8080';
 app.set('port', port);
 
 app.use(logger('dev'));

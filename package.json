@@ -1,17 +1,29 @@
 {
-  "name": "wd6i-shopping-cart",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "shoppingcart-mean",
+  "version": "1.0.0",
+  "description": "Shopping Cart App built with Angular 5 and the MEAN stack",
+  "main": "server.js",
   "scripts": {
-    "ng": "ng",
+    "test": "test",
+    "start": "node server.js",
     "build": "ng build",
-    "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "typings install",
-    "start": "node server.js"
+    "e2e": "ng e2e"
   },
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjweber/shoppingcart-mean.git"
+  },
+  "keywords": [
+    "Shopping",
+    "cart",
+    "mean"
+  ],
+  "author": "Justin Weber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjweber/shoppingcart-mean/issues"
+  },
   "dependencies": {
     "@angular/cli": "^1.7.0",
     "@angular/compiler-cli": "^5.2.5",
@@ -69,8 +81,5 @@
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
   },
-  "engines": {
-    "node": "9.8.0",
-    "npm": "5.6.0"
-  }
+  "homepage": "https://github.com/jjweber/shoppingcart-mean#readme"
 }
